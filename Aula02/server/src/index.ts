@@ -2,6 +2,8 @@ import express from "express";
 import routes from "./routes";
 import dotenv from "dotenv";
 import connect from "./models/connection";
+
+
 dotenv.config();
 // será usado 3000 se a variável de ambiente não tiver sido definida
 const PORT = process.env.PORT || 3000;

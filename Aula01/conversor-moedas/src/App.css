@@ -1,16 +1,27 @@
+body {
+  background-color: #afafaf; /* Fundo cinza claro para maior conforto */
+  font-family: Arial, sans-serif; /* Fonte padrão para melhor legibilidade */
+  margin: 0;
+  padding: 0;
+}
 
 .App {
   text-align: center;
   margin-top: 50px;
 }
+
 input,
 select,
 button {
   margin: 10px;
   padding: 10px;
   font-size: 16px;
+  border: 1px solid #afafaf; /* Adiciona uma borda leve */
+  border-radius: 6px; /* Bordas arredondadas */
+  background-color: #fff; /* Fundo branco para os elementos */
 }
+
 h2 {
   margin-top: 20px;
-  color: #4caf50;
+  color: #228125;
 }
