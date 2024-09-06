@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 // A URI indica o IP, a porta e BD a ser conectado
-const uri = "mongodb://127.0.0.1:27017/bdaula";
+const uri = "mongodb://127.0.0.1:27017/aula2-ldw";
 export default function connect() {
   // Configura manipuladores de eventos para diferentes estados de conexão
   // cada mensagem de log indica um estado específico da conexão.
