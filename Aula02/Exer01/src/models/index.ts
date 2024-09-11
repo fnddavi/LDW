@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 // Schema para as pessoas
-const peopleSchema = new Schema({
+const personSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -34,7 +34,7 @@ const phoneSchema = new Schema({
   },
   idpeople: {
     type: Schema.Types.ObjectId,
-    ref: "People",
+    ref: "Person",
     required: true,
   }, // Referência para o dono do telefone
 });
@@ -58,14 +58,14 @@ const carByPersonSchema = new Schema({
   }, // Referência para o carro
   idpeople: {
     type: Schema.Types.ObjectId,
-    ref: "People",
+    ref: "Person",
     required: true,
   }, // Referência para a pessoa
 });
 
-const People = mongoose.model("People", peopleSchema);
+const Person = mongoose.model("Person", personSchema);
 const Car = mongoose.model("Car", carSchema);
 const Phone = mongoose.model("Phone", phoneSchema);
 const CarByPerson = mongoose.model("CarByPerson", carByPersonSchema);
 
-export { People, Car, Phone, CarByPerson };
+export { Person, Car, Phone, CarByPerson };
