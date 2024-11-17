@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import expensesRoutes from "./routes/expenses";
+import expensesRoutes from "./routes/expense-routes";
 import mongoose from "mongoose";
 
 const app = express();
