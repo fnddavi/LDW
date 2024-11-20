@@ -7,7 +7,7 @@ export default class ExpenseController {
       const expense: IExpense = await Expense.create(req.body);
       return res.status(201).json(expense);
     } catch (error) {
-      return res.status(500).json({ error: "Error creating expense" });
+      return res.status(500).json({ error: "Erro ao criar despesa" });
     }
   }
 
@@ -16,17 +16,18 @@ export default class ExpenseController {
       const expenses: IExpense[] = await Expense.find().sort({ date: -1 });
       return res.json(expenses);
     } catch (error) {
-      return res.status(500).json({ error: "Error fetching expenses" });
+      return res.status(500).json({ error: "Erro ao buscar despesas" });
     }
   }
 
   public async getOne(req: Request, res: Response): Promise<Response> {
     try {
       const expense: IExpense | null = await Expense.findById(req.params.id);
-      if (!expense) return res.status(404).json({ error: "Expense not found" });
+      if (!expense)
+        return res.status(404).json({ error: "Despesa não encontrada" });
       return res.json(expense);
     } catch (error) {
-      return res.status(500).json({ error: "Error fetching expense" });
+      return res.status(500).json({ error: "Erro ao buscar despesa" });
     }
   }
 
@@ -37,10 +38,11 @@ export default class ExpenseController {
         req.body,
         { new: true }
       );
-      if (!expense) return res.status(404).json({ error: "Expense not found" });
+      if (!expense)
+        return res.status(404).json({ error: "Despesa não encontrada" });
       return res.json(expense);
     } catch (error) {
-      return res.status(500).json({ error: "Error updating expense" });
+      return res.status(500).json({ error: "Erro ao atualizar despesa" });
     }
   }
 
@@ -49,10 +51,11 @@ export default class ExpenseController {
       const expense: IExpense | null = await Expense.findByIdAndDelete(
         req.params.id
       );
-      if (!expense) return res.status(404).json({ error: "Expense not found" });
+      if (!expense)
+        return res.status(404).json({ error: "Despesa não encontrada" });
       return res.status(204).send();
     } catch (error) {
-      return res.status(500).json({ error: "Error deleting expense" });
+      return res.status(500).json({ error: "Erro ao deletar despesa" });
     }
   }
 
@@ -70,7 +73,8 @@ export default class ExpenseController {
       const total = result.length > 0 ? result[0].total : 0;
       return res.json({ total });
     } catch (error) {
-      return res.status(500).json({ error: "Error calculating total" });
+      return res.status(500).json({ error: "Erro ao calcular total" });
     }
   }
 }
+//
