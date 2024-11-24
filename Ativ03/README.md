@@ -12,12 +12,14 @@ Este aplicativo é dividido em duas partes principais:
 
 ### 1. Configurando o Backend
 Abra o terminal e execute os comandos abaixo:
-cd backend
-npm i 
-npm run dev
+    
+    cd backend
+    npm i 
+    npm run dev
 
-### 2. Configurando o Backend
+### 2. Configurando o Frontend
 Abra o terminal e execute os comandos abaixo:
-cd frontend
-npm i 
-npm start
+
+    cd frontend
+    npm i 
+    npm start
