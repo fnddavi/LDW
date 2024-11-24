@@ -1,4 +1,4 @@
-# Atividade Oficial
+# Atividade 2
 
 ## Enunciado
 Implementação de um sistema CRUD (Create, Read, Update, Delete) para um Gerenciador de Tarefas com TypeScript e MongoDB.
@@ -31,11 +31,7 @@ Desenvolver uma aplicação completa em TypeScript que permita a criação, leit
 - **Busca por palavras-chave:** Título, descrição, listas.
 - **Filtros:** Por data, prioridade, status, lista.
 
-#### Compartilhamento
-- **Compartilhamento de listas:** Possibilidade de compartilhar listas com outros usuários.
-
 ## Modelo de Dados no MongoDB
-- **Usuários:** Nome, e-mail, senha, listas.
 - **Listas:** Nome, usuário, tarefas.
 - **Tarefas:** Título, descrição, data de criação, data de vencimento, prioridade, status, lista, subtarefas, anexos.
 
@@ -62,9 +58,19 @@ A estrutura de um projeto de gerenciador de tarefas pode variar dependendo das t
 - **database.config.ts:** Contém as configurações para se conectar ao banco de dados MongoDB.
 
 ### Estrutura do projeto:
-task-manager/
-├── index.js         (backend)
-├── index.html       (frontend HTML)
-├── styles.css       (estilos CSS)
-├── script.js        (frontend JavaScript)
-└── package.json     (dependências)
+
+  Ativ02
+  
+  ├── .gitignore                 → Arquivo para especificar quais arquivos e diretórios ignorar no repositório Git
+  
+  ├── package.json               → Arquivo com metadados sobre o projeto e suas dependências
+  
+  ├── package-lock.json          → Arquivo que trava as versões das dependências do projeto
+  
+  ├── task-manager.css           → Arquivo CSS usado para estilizar o projeto
+  
+  ├── task-manager.html          → Arquivo HTML que serve como a estrutura principal da página web do projeto
+  
+  ├── task-manager-back.js       → Arquivo JavaScript utilizado para a lógica de backend do projeto
+  
+  └── task-manager-front.js      → Arquivo JavaScript utilizado para a lógica de frontend do projeto
